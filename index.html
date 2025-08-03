@@ -17,43 +17,43 @@
       position: relative;
     }
     .gradient-text {
-      background: linear-gradient(90deg, #00ffcc, #ff007f); /* Neon gradient */
+      background: linear-gradient(90deg, #00aaff, #8000ff); /* Blue to purple gradient */
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     .glow-box {
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
       transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
     .glow-box:hover {
-      box-shadow: 0 0 30px rgba(255, 0, 127, 0.7); /* Neon pink glow on hover */
+      box-shadow: 0 0 30px rgba(128, 0, 255, 0.7); /* Purple glow on hover */
       transform: translateY(-5px) scale(1.05);
     }
     .button {
-      background-color: #ff007f; /* Neon pink */
+      background-color: #8000ff; /* Purple */
       color: #121212; /* Dark text */
       border-radius: 50px;
       padding: 12px 24px;
       transition: background-color 0.3s, transform 0.3s;
       font-weight: 600;
-      border: 2px solid #00ffcc; /* Neon green border */
+      border: 2px solid #00aaff; /* Blue border */
     }
     .button:hover {
-      background-color: #00ffcc; /* Neon green on hover */
-      border: 2px solid #ff007f; /* Neon pink border on hover */
+      background-color: #00aaff; /* Blue on hover */
+      border: 2px solid #8000ff; /* Purple border on hover */
       transform: scale(1.1);
     }
     .card {
       background-color: rgba(30, 30, 30, 0.8); /* Darker card background */
-      border: 1px solid #00ffcc; /* Neon green border */
+      border: 1px solid #00aaff; /* Blue border */
       padding: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 30px rgba(255, 0, 127, 0.7); /* Neon pink glow on hover */
+      box-shadow: 0 0 30px rgba(128, 0, 255, 0.7); /* Purple glow on hover */
     }
     /* Background Animation */
     .background-animation {
@@ -62,7 +62,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(270deg, rgba(0, 255, 204, 0.1), rgba(255, 0, 127, 0.1));
+      background: linear-gradient(270deg, rgba(0, 170, 255, 0.1), rgba(128, 0, 255, 0.1));
       animation: gradientAnimation 5s ease infinite;
       z-index: -1;
     }
@@ -196,14 +196,14 @@
           </div>
 
           <div class="card glow-box">
-            <h3 class="text-xl font-semibold mb-3 text-green-400">Why AOKAO?</h3>
+            <h3 class="text-xl font-semibold mb-3 text-blue-400">Why AOKAO?</h3>
             <p class="text-gray-300">
               97.9% uptime, distributed systems, strong security, and automation-first principles — all backed by a team that values integrity and decentralization.
             </p>
           </div>
 
           <div class="card glow-box">
-            <h3 class="text-xl font-semibold mb-3 text-yellow-400">Future Plans</h3>
+            <h3 class="text-xl font-semibold mb-3 text-purple-400">Future Plans</h3>
             <p class="text-gray-300">
               AOKAO will offer premium analytics dashboards, custom validator services for new chains, and delegated staking interfaces for institutions and DAOs.
             </p>
@@ -286,10 +286,10 @@
 
       document.querySelectorAll('.glow-box').forEach(box => {
         box.addEventListener('mouseenter', () => {
-          box.style.boxShadow = '0 0 40px rgba(0, 255, 204, 0.3)';
+          box.style.boxShadow = '0 0 40px rgba(0, 170, 255, 0.3)';
         });
         box.addEventListener('mouseleave', () => {
-          box.style.boxShadow = '0 0 30px rgba(0, 255, 204, 0.2)';
+          box.style.boxShadow = '0 0 30px rgba(0, 170, 255, 0.2)';
         });
       });
 
