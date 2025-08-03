@@ -10,7 +10,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
     body {
       font-family: 'Space Grotesk', sans-serif;
-      background-color: #0a0a0a;
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
       color: #e0e0e0;
       min-height: 100vh;
       overflow-x: hidden;
@@ -23,30 +23,12 @@
       background-clip: text;
     }
     .glow-box {
-      box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
-    .pulse {
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 255, 204, 0.7);
-      }
-      70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 15px rgba(0, 255, 204, 0);
-      }
-      100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 255, 204, 0);
-      }
-    }
-    .tab-content {
-      display: none;
-    }
-    .tab-content.active {
-      display: block;
+    .glow-box:hover {
+      box-shadow: 0 0 30px rgba(0, 255, 204, 0.7);
+      transform: translateY(-5px) scale(1.05);
     }
     .button {
       background-color: #00ffcc;
@@ -54,13 +36,16 @@
       border-radius: 50px;
       padding: 12px 24px;
       transition: background-color 0.3s, transform 0.3s;
+      font-weight: 600;
+      border: 2px solid transparent;
     }
     .button:hover {
       background-color: #0070f3;
-      transform: scale(1.05);
+      border: 2px solid #00ffcc;
+      transform: scale(1.1);
     }
     .card {
-      background-color: rgba(10, 10, 10, 0.8);
+      background-color: rgba(20, 20, 20, 0.8);
       border-radius: 15px;
       padding: 20px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -222,6 +207,28 @@
             <p class="text-gray-300">
               AOKAO will offer premium analytics dashboards, custom validator services for new chains, and delegated staking interfaces for institutions and DAOs.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Sections for Dashboard Interfaces, Uptime Demos, and Validator Architectures -->
+      <section class="my-24">
+        <h2 class="text-3xl font-bold text-center mb-8">Dashboard Interfaces</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card glow-box">
+            <h3 class="text-xl font-semibold mb-3">Validator Dashboard</h3>
+            <p class="text-gray-400">An intuitive interface for monitoring validator performance, rewards, and uptime metrics.</p>
+            <img src="https://via.placeholder.com/300" alt="Validator Dashboard Example" class="mt-4 rounded-lg">
+          </div>
+          <div class="card glow-box">
+            <h3 class="text-xl font-semibold mb-3">Uptime Monitoring</h3>
+            <p class="text-gray-400">Real-time uptime tracking with alerts for any downtime incidents.</p>
+            <img src="https://via.placeholder.com/300" alt="Uptime Monitoring Example" class="mt-4 rounded-lg">
+          </div>
+          <div class="card glow-box">
+            <h3 class="text-xl font-semibold mb-3">System Architecture</h3>
+            <p class="text-gray-400">Visual representation of the validator system architecture for enhanced understanding.</p>
+            <img src="https://via.placeholder.com/300" alt="System Architecture Example" class="mt-4 rounded-lg">
           </div>
         </div>
       </section>
